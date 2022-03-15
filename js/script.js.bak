@@ -1,0 +1,31 @@
+$(".color").hover(()=>{
+	$(".color").addClass("colorhover");
+	$("button").addClass("buttonhover");
+},()=>{
+	$(".color").removeClass("colorhover");
+	$("button").removeClass("buttonhover");
+});
+$("button").click(()=>{
+	$("button").attr('disabled','disabled');
+	$("#one").addClass("addanimation");
+	setTimeout(function(){
+		$("#two").addClass("addanimation");
+	},700);
+	setTimeout(function(){
+		$("#three").addClass("addanimation");
+	},1400);
+	setTimeout(function(){
+		$("#four").addClass("addanimation");
+	},2100);
+	setTimeout(function(){
+		$("#five").addClass("addanimation");
+	},2800);
+	setTimeout(()=>{
+		$("#one").removeClass("addanimation");
+		$("#two").removeClass("addanimation");
+		$("#three").removeClass("addanimation");
+		$("#four").removeClass("addanimation");
+		$("#five").removeClass("addanimation");
+		$("button").removeAttr('disabled');
+	},12800);
+});
